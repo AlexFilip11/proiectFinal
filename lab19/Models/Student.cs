@@ -15,6 +15,7 @@ namespace proiectFinal.Database_Classes
         public string Surname { get; set; }
         public int Age { get; set; }
         public Address? Address { get; set; }
-        public List<Mark> Marks { get; set; } = new List<Mark>();
+        public List<Mark>? Marks { get; set; } = new List<Mark>();
+
     }
 }

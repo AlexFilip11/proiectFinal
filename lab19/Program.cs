@@ -1,8 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using proiectFinal.Database_Classes;
 using proiectFinal.Models;
+using proiectFinal.DAL;
 
- void Seed()
+Seed();
+Student x = null;
+DataAccessLayerStudents dal = new DataAccessLayerStudents(new StudentsDbContext());
+dal.CreateStudent(x);
+
+void Seed()
 {
     using var ctx = new StudentsDbContext();
 
