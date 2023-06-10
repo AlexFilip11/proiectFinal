@@ -3,8 +3,8 @@ using proiectFinal.Database_Classes;
 using proiectFinal.Models;
 using proiectFinal.DAL;
 
-Seed();
 
+/*
 void Seed()
 {
     using var ctx = new StudentsDbContext();
@@ -36,4 +36,4 @@ void Seed()
     ctx.SaveChanges();
 }
         
-
+*/

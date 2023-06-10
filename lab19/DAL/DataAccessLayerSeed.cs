@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace proiectFinal.DAL
 {
-    internal class DataAccessLayerSeed
+    public class DataAccessLayerSeed
     {
         public void Seed()
         {
