@@ -24,6 +24,10 @@ namespace proiectFinal.DAL
         public List<Subject> GetAllSubjects() => ctx.Subjects.ToList();
         public List<Subject> GetAllSubjectsOfASpecificStudent(int studentId)
         {
+            if(!ctx.Students.Any(s=>s.Id == studentId))
+            {
+                throw new InvalidIdException($"invalid student id {studentId}");
+            }
             return ctx.Marks.Where(s=> s.StudentId == studentId).Select(m => m.Subject).Distinct().ToList();
         }
         public void DeleteSubject(int subjectId)

@@ -28,8 +28,7 @@ namespace proiectFinal.DAL
             }
             catch (Exception ex)
             {
-                //throw exeption
-                return null;
+                throw new InvalidIdException($"invalid no student id {studentId}");
             }
         }
         public void CreateStudent(Student newStudent)

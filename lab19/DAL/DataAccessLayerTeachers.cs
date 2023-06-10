@@ -53,7 +53,7 @@ namespace proiectFinal.DAL
         {
             if(ctx.Teachers.Where(t=> t.Id == teacherId).Where(s=> s.Id == subjectId).Any())
             {
-                // exeption teacher has that subject
+                throw new InvalidIdException($"invalid subject id {subjectId}");
             }
             var teacher = ctx.Teachers.Include(s => s.Subjects).Single(t => t.Id == teacherId);
             teacher.Subjects = new List<Subject>(subjectId);
@@ -63,6 +63,15 @@ namespace proiectFinal.DAL
         {
             var teacher = ctx.Teachers.Single(t=> t.Id == teacherId);
             teacher.Rank = newRank;
+        }
+        public List<string> GetAllGradesOfferedByATeacher(int teacherId)
+        {
+            List<string> teachersGrades = new List<string>();
+            foreach(var mark in ctx.Marks.Where(m=> m.TeacherId == teacherId))
+            {
+                teachersGrades.Add($"{mark.Value} +{mark.DataAndTime} +{mark.StudentId}/n");
+            }
+            return teachersGrades;
         }
     }
 }

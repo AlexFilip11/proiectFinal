@@ -14,5 +14,6 @@ namespace proiectFinal.Models
         public Address? Address { get; set; }
         public Rank Rank { get; set; }
         public List<Subject> Subjects { get; set; } = new List<Subject>();
+        public List<Mark> Marks { get; set; } = new List<Mark>();
     }
 }

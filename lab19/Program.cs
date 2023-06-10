@@ -4,9 +4,6 @@ using proiectFinal.Models;
 using proiectFinal.DAL;
 
 Seed();
-Student x = null;
-DataAccessLayerStudents dal = new DataAccessLayerStudents(new StudentsDbContext());
-dal.CreateStudent(x);
 
 void Seed()
 {

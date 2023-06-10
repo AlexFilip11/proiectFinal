@@ -16,6 +16,6 @@ namespace proiectFinal.Database_Classes
         public int Age { get; set; }
         public Address? Address { get; set; }
         public List<Mark>? Marks { get; set; } = new List<Mark>();
-
+        public List<Subject>? Subjects { get; set; } 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proiectFinal.Database_Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,7 @@ namespace proiectFinal.Models
         public string Name { get; set; }
         public List<Teacher>? Teacher { get; set; } = new List<Teacher>();
         public List<Mark>? Marks { get; set; } = new List<Mark>();
+        public int? StudentId;
+        public Student Student;
     }
 }
